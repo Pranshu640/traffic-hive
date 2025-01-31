@@ -1,0 +1,108 @@
+.notifications-wrapper {
+  position: relative;
+}
+
+.delhi-updates-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.delhi-updates-btn:hover {
+  background: #45a049;
+}
+
+.notification-panel {
+  position: absolute;
+  top: calc(100% + 1rem);
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.notification-content {
+  padding: 1.5rem;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.notification-header h2 {
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.updates-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.update-card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.update-card h3 {
+  color: #1a1a1a;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Add specific styling for vehicle rule text */
+.update-card div {
+  color: #1a1a1a; /* Dark text color */
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.aqi-value {
+  color: #dc2626 !important; 
+  font-weight: 600;
+}
+
+.road-updates {
+  color: #1a1a1a;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.update-timestamp {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.75rem;
+}
+
+.error-notification {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+} 
