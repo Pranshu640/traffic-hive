@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
+import { Bell, X, Car, Construction, Wind, MapPin } from 'lucide-react';
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 
 const DelhiNotifications = () => {
-  const [showNotification, setShowNotification] = React.useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+  
+  // Error boundary state
   const [hasError, setHasError] = React.useState(false);
 
   const today = new Date();
+  const formattedDate = today.toLocaleDateString('en-US', {
+    month: 'numeric',
+    day: 'numeric',
+    year: 'numeric'
+  });
   const isOddDay = today.getDate() % 2 === 1;
   
-  const getFormattedDate = () => {
-    try {
-      return today.toLocaleDateString();
-    } catch (error) {
-      return 'Today';
-    }
-  };
-
   if (hasError) {
     return (
       <div className="error-notification">
@@ -29,16 +30,15 @@ const DelhiNotifications = () => {
       <button 
         onClick={() => setShowNotification(true)}
         className="delhi-updates-btn"
-      > 
-        Traffic Updates
+      >
+        Show Updates
       </button>
 
       {showNotification && (
         <div className="notification-panel">
           <div className="notification-content">
-            {/* Header */}
             <div className="notification-header">
-              <h2>Delhi Updates</h2>
+              <h2>Delhi Updates - {formattedDate}</h2>
               <button 
                 onClick={() => setShowNotification(false)}
                 className="close-btn"
@@ -47,40 +47,52 @@ const DelhiNotifications = () => {
               </button>
             </div>
 
-            {/* Content */}
             <div className="updates-container">
-              {/* AQI Card */}
+              {/* AQI Section */}
               <div className="update-card">
-                <h3>Air Quality</h3>
-                <div className="aqi-value">
-                  AQI: 285 (Very Poor)
+                <div className="aqi-header">
+                  <span className="wind-icon">💨</span>
+                  Overall Air Quality Index: <span className="aqi-value">285 (Very Poor)</span>
+                </div>
+                
+                <div className="local-aqi">
+                  <p>Local AQI Readings:</p>
+                  <div className="aqi-grid">
+                    <div className="aqi-location">
+                      <span className="location-icon">📍</span>
+                      Vigyan Bhawan: <span className="aqi-number">245</span>
+                    </div>
+                    <div className="aqi-location">
+                      <span className="location-icon">📍</span>
+                      India Gate: <span className="aqi-number">268</span>
+                    </div>
+                    <div className="aqi-location">
+                      <span className="location-icon">📍</span>
+                      Lodhi Road: <span className="aqi-number">230</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Vehicle Rule Card */}
               <div className="update-card">
-                <h3>Vehicle Rule</h3>
-                <div>
-                  {isOddDay ? (
-                    <span>Odd numbered vehicles allowed today</span>
-                  ) : (
-                    <span>Even numbered vehicles allowed today</span>
-                  )}
+                <div className="vehicle-rule">
+                  <span className="car-icon">🚗</span>
+                  Today's Odd-Even Rule: {isOddDay ? "Odd" : "Even"} numbered vehicles allowed
                 </div>
               </div>
 
-              {/* Road Updates Card */}
+              {/* Road Works Card */}
               <div className="update-card">
-                <h3>Road Updates</h3>
-                <div className="road-updates">
-                  <div>• Nehru Place: Construction ongoing</div>
-                  <div>• CP: Road maintenance</div>
+                <div className="roadworks">
+                  <span className="construction-icon">🚧</span>
+                  Ongoing Road Works:
+                  <div className="roadworks-list">
+                    <p>Nehru Place (Duration: 2 days)</p>
+                    <p>Connaught Place (Duration: 5 days)</p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="update-timestamp">
-              Last updated: {getFormattedDate()}
             </div>
           </div>
         </div>
@@ -89,4 +101,4 @@ const DelhiNotifications = () => {
   );
 };
 
-export default DelhiNotifications; 
+export default DelhiNotifications;
