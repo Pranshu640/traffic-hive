@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './styles.css';
-import { Bell, X, Car, Construction, Wind, MapPin } from 'lucide-react';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 
 const DelhiNotifications = () => {
   const [showNotification, setShowNotification] = useState(false);
