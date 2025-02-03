@@ -23,7 +23,7 @@ const modelDetails = {
     description: 'Never lose your way again with Real-Time Guidance by Traffic Hive! Our cutting-edge system is your trusted partner for navigating even the busiest roads with ease. Designed to provide accurate and instant directions, Real-Time Guidance ensures that you reach your destination without unnecessary detours or delays.',
     subtitle: 'Let Traffic Hive lead the way. Your destination, made simpler.',
     buttonText: 'ROUTE UI',
-    tryNowLink: 'https://traffic-signal-sigma.vercel.app',
+    tryNowLink: 'https://traffic-hivemapping.vercel.app',
     image: realTimeRoute
   },
   'data-driven-insights': {
