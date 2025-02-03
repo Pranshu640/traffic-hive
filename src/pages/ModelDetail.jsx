@@ -15,7 +15,7 @@ const modelDetails = {
     description: 'Say goodbye to traffic jams and frustrating delays! At Traffic Hive, we\'ve crafted a state-of-the-art solution to transform how cities handle traffic. Our Smart Signal and Congestion Management system is designed to optimize traffic flow and minimize congestion, ensuring a smoother journey for everyone.',
     subtitle: 'Experience the difference with Traffic Hive—where technology meets smoother travel!',
     buttonText: 'TRY NOW',
-    tryNowLink: 'https://github.com/Pranshu640/Traffic-signal',
+    tryNowLink: 'traffic-signal-sigma.vercel.app',
     image: smartTrafficLight
   },
   'real-time-route': {
@@ -23,7 +23,7 @@ const modelDetails = {
     description: 'Never lose your way again with Real-Time Guidance by Traffic Hive! Our cutting-edge system is your trusted partner for navigating even the busiest roads with ease. Designed to provide accurate and instant directions, Real-Time Guidance ensures that you reach your destination without unnecessary detours or delays.',
     subtitle: 'Let Traffic Hive lead the way. Your destination, made simpler.',
     buttonText: 'ROUTE UI',
-    tryNowLink: 'https://traffic-hivemapping.vercel.app',
+    tryNowLink: 'https://traffic-signal-sigma.vercel.app',
     image: realTimeRoute
   },
   'data-driven-insights': {

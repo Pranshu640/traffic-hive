@@ -14,6 +14,13 @@ export default defineConfig({
   server: {
     port: process.env.PORT || 3000,
     host: '0.0.0.0',
+    proxy: {
+      '/api': {
+        target: 'https://api.waqi.info',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    },
     allowedHosts: [
       'traffichivetest.onrender.com',
       'traffichive-frontend.onrender.com',
