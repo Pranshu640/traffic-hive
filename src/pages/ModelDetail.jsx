@@ -15,7 +15,7 @@ const modelDetails = {
     description: 'Say goodbye to traffic jams and frustrating delays! At Traffic Hive, we\'ve crafted a state-of-the-art solution to transform how cities handle traffic. Our Smart Signal and Congestion Management system is designed to optimize traffic flow and minimize congestion, ensuring a smoother journey for everyone.',
     subtitle: 'Experience the difference with Traffic Hive—where technology meets smoother travel!',
     buttonText: 'TRY NOW',
-    tryNowLink: 'https://github.com/Pranshu640/Traffic-signal',
+    tryNowLink: 'https://traffic-signal-sigma.vercel.app/',
     image: smartTrafficLight
   },
   'real-time-route': {
